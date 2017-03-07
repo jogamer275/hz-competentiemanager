@@ -32,10 +32,10 @@
 
 	<!--Fillable form which needs a description for the project being edited-->
 				<div class="form-group">
-						<div class="col-md-8">
-							{!! Form::label('description', 'Description', ['class' => 'control-label']) !!}
-							{!! Form::text('description', null, ['class' => 'form-control', 'placeholder' => 'Project beschrijving']) !!}
-						</div>
+					<div class="col-md-12">
+						{!! Form::label('description', 'Description', ['class' => 'control-label']) !!}
+						{!! Form::textarea('description', null,  ['class' => 'form-control', 'placeholder' => 'Beschrijving', 'rows' => '10']) !!}
+					</div>
 				</div>
 
 	<!--This button save the edited project by calling upon the update method in the ProjectController-->

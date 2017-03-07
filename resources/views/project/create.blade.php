@@ -36,9 +36,9 @@
 	</div>
 
 	<!--Fillable form which needs a description for the project being added -->
-	<div class="col-md-6">
+	<div class="col-md-12">
 		{!! Form::label('description', 'Description', ['class' => 'control-label']) !!}
-		{!! Form::text('description', null, ['class' => 'form-control', 'placeholder' => 'Beschrijving']) !!}
+		{!! Form::textarea('description', null,  ['class' => 'form-control', 'placeholder' => 'Beschrijving', 'rows' => '10']) !!}
 	</div>
 
 </div>
