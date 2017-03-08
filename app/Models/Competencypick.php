@@ -15,9 +15,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-                           'name',
-                           'email',
-                           'password',
+                           'competency_name',
+                           'user_name'
                           ];
 
     /**
@@ -25,13 +24,9 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
-                         'password',
-                         'remember_token',
-                        ];
 
     /**
-     * Many to many elequent relation with competencies. (or collection if called without parentheces).
+     * Many to many eloquent relation with competencies. (or collection if called without parentheses).
      *
      * @return Elequent Relation
      */
@@ -43,24 +38,24 @@ class User extends Authenticatable
 //end competencies()
 
     /**
-     * If assigned to a project as contact, will return that relation.
+     * If assigned to a competency as user, will return that relation.
      *
      * @return Elequent Relation
      */
-    public function contactOfProject()
+    public function userOfCompetency()
     {
-        return $this->belongsTo('App\Models\Project', 'project_contact_id');
+        return $this->belongsTo('App\Models\Competencypick', 'user_id');
     }
 
 //end contactOfProject()
 
 /**
- * Will some day return which students have chosen which competency
+ * Will some day return which users have chosen which competency
  * @return Eloquent Relation
  */
-public function competencyOfStudent()
+public function competencyOfUser()
 {
-    return $this->belongsTo('App\Models\Student', 'student_id');
+    return $this->belongsTo('App\Models\User', 'competency_id');
 }
 
 //end competencyOfStudent()

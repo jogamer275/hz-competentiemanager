@@ -23,11 +23,18 @@ Route::get('/project', function () {
     return view('project');
 });
 
+Route::get('/competencypick', function () {
+    return view('competencypick');
+});
+
+
+
 Route::auth();
 
 Route::get('/dashboard', 'HomeController@index');
 Route::get('/demand', 'DemandController@index');
 
 Route::resource('competency', 'CompetencyController');
+Route::resource('competencypick', 'CompetencypickController');
 Route::resource('project', 'ProjectController');
 Route::resource('user', 'UserController');
