@@ -68,7 +68,7 @@ class UserController extends Controller
 
         $this->users->create($request->all());
 
-        return redirect('/user/create')->with(['status' => 'Gebruiker Aangemaakt']);
+        return redirect('/user/')->with(['status' => 'Gebruiker Aangemaakt']);
     }
 
 //end store()
@@ -140,7 +140,7 @@ class UserController extends Controller
               $user->save();
 
               // Redirect to the user.index page with a success message.
-              return redirect("/user/$id/edit")->with(['status' => 'Gebruiker aangepast']);
+              return redirect("/user/")->with(['status' => 'Gebruiker aangepast']);
     }
 
 //end update()
