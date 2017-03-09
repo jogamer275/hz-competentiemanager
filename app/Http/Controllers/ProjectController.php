@@ -68,7 +68,7 @@ class ProjectController extends Controller
 
         $this->projects->create($request->all());
 
-        return redirect('/project/create')->with(['status' => 'Project Aangemaakt']);
+        return redirect('/project/')->with(['status' => 'Project Aangemaakt']);
     }
 
 //end store()
