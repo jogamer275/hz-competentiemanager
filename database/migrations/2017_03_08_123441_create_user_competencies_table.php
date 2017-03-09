@@ -11,17 +11,13 @@ class CreateUserCompetenciesTable extends Migration
      *
      * @return void
      */
-    Schema::enableForeignKeyConstraints();
+    //Schema::enableForeignKeyConstraints();
     public function up()
     {
         Schema::create('user_competencies', function (Blueprint $table) {
          $table->increments('id');
-         $table->foreign ('user_id');
-                ->references('id')->on('users')
-                ->onDelete('cascade');
-         $table->foreign ('competency_id');
-                ->references('id')->on('competency')
-                ->onDelete('cascade');
+         $table->integer ('user_id');
+         $table->integer ('competency_id');
          $table->timestamps();
      });
     }
@@ -35,5 +31,5 @@ class CreateUserCompetenciesTable extends Migration
     {
         Schema::drop('user_competencies');
     }
-     Schema::disableForeignKeyConstraints();
+    // Schema::disableForeignKeyConstraints();
 }
