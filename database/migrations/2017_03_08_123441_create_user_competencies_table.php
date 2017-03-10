@@ -11,11 +11,9 @@ class CreateUserCompetenciesTable extends Migration
      *
      * @return void
      */
-    //Schema::enableForeignKeyConstraints();
     public function up()
     {
         Schema::create('user_competencies', function (Blueprint $table) {
-         $table->increments('id');
          $table->integer ('user_id');
          $table->integer ('competency_id');
          $table->timestamps();
@@ -31,5 +29,4 @@ class CreateUserCompetenciesTable extends Migration
     {
         Schema::drop('user_competencies');
     }
-    // Schema::disableForeignKeyConstraints();
 }

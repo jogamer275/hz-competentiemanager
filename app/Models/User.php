@@ -58,9 +58,9 @@ class User extends Authenticatable
  * Will some day return which students have chosen which competency
  * @return Eloquent Relation
  */
-public function competencyOfStudent()
+public function competencyOfUser()
 {
-    return $this->belongsTo('App\Models\Student', 'student_id');
+    return $this->belongsTo('App\Models\User', 'student_id');
 }
 
 //end competencyOfStudent()

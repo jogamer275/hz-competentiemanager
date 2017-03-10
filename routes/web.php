@@ -23,11 +23,13 @@ Route::get('/project', function () {
     return view('project');
 });
 
-Route::get('/competencypick', function () {
-    return view('competencypick');
+Route::get('/userCompetencies', function () {
+    return view('userCompetencies/index', [
+        'name' => Auth::user()->name,
+        'competency' => DB::table('competencies')->pluck('abbreviation', 'name')
+
+    ]);
 });
-
-
 
 Route::auth();
 

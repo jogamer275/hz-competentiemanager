@@ -59,7 +59,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/competency') }}">Competenties</a></li>
                         <li><a href="{{ url('/project') }}">Projecten</a></li>
-                        <li><a href="{{ url('/competencypick') }}">Competentie Kiezen</a></li>
+                        <li><a href="{{ url('userCompetencies') }}">Competentie Kiezen</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
