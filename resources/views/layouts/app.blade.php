@@ -55,12 +55,7 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        <li><a href="{{ url('/competency') }}">Competenties</a></li>
-                        <li><a href="{{ url('/project') }}">Projecten</a></li>
-                        <li><a href="{{ url('userCompetencies') }}">Competentie Kiezen</a></li>
-                    </ul>
+                                     
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
@@ -94,6 +89,14 @@
                         @endif
                     </ul>
                 </div>
+				<div>
+					<!--left side of navbar-->
+					<ul class="nav navbar-nav">
+                        <li><a href="{{ url('/competency') }}">Competenties</a></li>
+                        <li><a href="{{ url('/project') }}">Projecten</a></li>
+                        <li><a href="{{ url('userCompetencies') }}">Competentie Kiezen</a></li>
+                    </ul>
+				</div>
             </div>
         </nav>
 
