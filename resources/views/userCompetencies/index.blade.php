@@ -23,6 +23,17 @@
 
 @endsection
 @section('scripts')
+	{{--<script>--}}
+		{{--<?php--}}
+			{{--if( $name == NULL) {--}}
+				{{--header('Location: welcome.blade.php ');--}}
+			{{--} else--}}
+
+
+
+		{{--?>--}}
+
+	{{--</script>--}}
 <script>
 	jQuery(document).ready(function($) {
 	    $(".row-link").click(function() {
