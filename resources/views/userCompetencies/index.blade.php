@@ -8,17 +8,30 @@
 
 @section('content')
 
-<h1>Dag <?= $name; ?>, kies hier je competentierino's</h1>
-<h2> <?= $competency;
+<h1>Dag <?= $name; ?>, selecteer hier je competenties</h1>
+<h2>
 
-//    foreach
+	<table style="width:100%">
+		<tr>
+			<th>Naam</th>
+			<th>Afkorting</th>
+			<th></th>
+		</tr>
+		@foreach ($competencies as $competency => $abbreviation)
+			<tr>
+				<td>
+					{{ $abbreviation }}
+				</td>
+				<td>
+					{{ $competency }}
+				</td>
+				<td>
+					<a href="http://www.studiodentaire.com/images/lower-molars.jpg" class="button">Kiezen</a>
+				</td>
+			</tr>
+		@endforeach
 
-    //    ($competency as $competencies) {
-    //        echo $competencies->abbreviation;}
-
-//    ?>
-
-<!-- } -->
+	</table>
 </h2>
 
 @endsection

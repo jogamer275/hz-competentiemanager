@@ -26,8 +26,7 @@ Route::get('/project', function () {
 Route::get('/userCompetencies', function () {
     return view('userCompetencies/index', [
         'name' => Auth::user()->name,
-        'competency' => DB::table('competencies')->pluck('abbreviation', 'name')
-
+        'competencies' => DB::table('competencies')->pluck('name', 'abbreviation'),
     ]);
 });
 
