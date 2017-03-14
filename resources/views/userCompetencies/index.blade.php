@@ -26,13 +26,16 @@
 					{{ $competency }}
 				</td>
 				<td>
-					<a href="http://www.studiodentaire.com/images/lower-molars.jpg" class="button">Kiezen</a>
+					<button type="submit" class="btn btn-primary">
+						Kiezen
+					</button>
 				</td>
 			</tr>
 		@endforeach
 
 	</table>
 </h2>
+
 
 @endsection
 @section('scripts')

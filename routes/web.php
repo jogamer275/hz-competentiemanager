@@ -36,6 +36,5 @@ Route::get('/dashboard', 'HomeController@index');
 Route::get('/demand', 'DemandController@index');
 
 Route::resource('competency', 'CompetencyController');
-Route::resource('competencypick', 'CompetencypickController');
 Route::resource('project', 'ProjectController');
 Route::resource('user', 'UserController');
