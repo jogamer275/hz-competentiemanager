@@ -23,12 +23,8 @@ Route::get('/project', function () {
     return view('project');
 });
 
-Route::get('/userCompetencies', function () {
-    return view('userCompetencies/index', [
-        'name' => Auth::user()->name,
-        'competencies' => DB::table('competencies')->pluck('name', 'abbreviation'),
-    ]);
-});
+Route::get('/userCompetencies', 'UserCompetenciesController@index');
+Route::post('/userCompetencies/store', 'UserCompetenciesController@store')->name('usercomp.store');
 
 Route::auth();
 

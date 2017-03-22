@@ -8,7 +8,7 @@
 
 @section('content')
 
-<h1>Dag <?= $name; ?>, selecteer hier je competenties</h1>
+<h1>Dag {{ Auth::user()->name }} ({{ Auth::user()->id }}), selecteer hier je competenties</h1>
 <h2>
 
 	<table style="width:100%">
@@ -17,18 +17,19 @@
 			<th>Afkorting</th>
 			<th></th>
 		</tr>
-		@foreach ($competencies as $competency => $abbreviation)
+		@foreach ($comps as $comp)
 			<tr>
 				<td>
-					{{ $abbreviation }}
+					{{ $comp->name }}
 				</td>
 				<td>
-					{{ $competency }}
+					{{ $comp->abbreviation }}
 				</td>
 				<td>
-					<button type="submit" class="btn btn-primary">
-						Kiezen
-					</button>
+					{{ Form::open(['route' => ['usercomp.store'], 'method'=>'POST']) }}
+					{{ Form::hidden('comp_id', $comp->id) }}
+					{!! Form::submit('Kiezen', array('class'=>'btn btn-primary')) !!}
+					{{ Form::close() }}
 				</td>
 			</tr>
 		@endforeach
