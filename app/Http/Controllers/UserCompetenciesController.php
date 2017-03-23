@@ -21,7 +21,7 @@ class UserCompetenciesController extends Controller
     public function store(Request $request)
     {
         DB::table('user_competencies')->insert(
-            ['user_id' => Auth::user()->id, 'competency_id' => $request['comp_id']]
+            ['users_id' => Auth::user()->id, 'competency_id' => $request['comp_id']]
         );
 
         return "Gefeliciteerd ". Auth::user()->name . " je hebt gekozen: " . $request['comp_id'] . " en je ID is " . Auth::user()->id;
