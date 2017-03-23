@@ -12,7 +12,7 @@
 
         <table style="width:100%">
             <tr>
-                <th>ID Competentie</th>
+                <th>Jouw Competenties</th>
                 <th></th>
             </tr>
             <tr>
@@ -24,7 +24,7 @@
             @foreach ($userComps as $userComp)
                 <tr>
                     <td>
-                        {{ $userComp }}
+                        {{$compName = DB::table('competencies')->where('id', $userComp)->value('name')}}
                     </td>
                 </tr>
             @endforeach
