@@ -7,7 +7,7 @@
 
 @section('content')
 
-    <h1>Dag {{ Auth::user()->name }} ({{ Auth::user()->id }}), hier zijn jouw competenties</h1>
+    <h1>Dag {{ Auth::user()->name }}, hier zijn jouw competenties</h1>
     <h2>
 
         <table style="width:100%">
