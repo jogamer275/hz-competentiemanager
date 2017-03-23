@@ -17,19 +17,17 @@
             </tr>
             <tr>
                 <td>
-
+                    <?= $userComps = DB::table('user_competencies')->pluck('competency_id');?>
                 </td>
             </tr>
-            {{--@foreach ($comps as $comp)--}}
-                {{--<tr>--}}
-                    {{--<td>--}}
-                        {{--{{ $comp->name }}--}}
-                    {{--</td>--}}
-                    {{--<td>--}}
-                        {{--{{ $comp->abbreviation }}--}}
-                    {{--</td>--}}
-                {{--</tr>--}}
-            {{--@endforeach--}}
+
+            @foreach ($userComps as $userComp)
+                <tr>
+                    <td>
+                        {{ $userComp }}
+                    </td>
+                </tr>
+            @endforeach
 
         </table>
     </h2>
