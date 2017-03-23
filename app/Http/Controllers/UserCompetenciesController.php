@@ -30,7 +30,7 @@ class UserCompetenciesController extends Controller
     public function show(Request $request)
     {
         return view('userCompetencies/show', [
-            'userComps' => user_competencies::all(),
+
         ]);
     }
 }

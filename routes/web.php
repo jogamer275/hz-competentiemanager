@@ -23,6 +23,8 @@ Route::get('/project', function () {
     return view('project');
 });
 
+
+Route::get('/userCompetencies/show', 'UserCompetenciesController@show');
 Route::get('/userCompetencies', 'UserCompetenciesController@index');
 Route::post('/userCompetencies/store', 'UserCompetenciesController@store')->name('usercomp.store');
 
