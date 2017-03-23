@@ -11,17 +11,19 @@
 	</a>
 </div>
 
-<div style="float:left">
-	<a class="btn btn-primary" href="{!! url('competency/edit') !!}">
-		Een competentie wijzigen
-	</a>
-</div>
+{{--made for a possible edit or show page in the future--}}
 
-<div style="float:left">
-	<a class="btn btn-primary" href="{!! url('competency/show') !!}">
-		Alle competenties weergeven
-	</a>
-</div>
+{{--<div style="float:left">--}}
+	{{--<a class="btn btn-primary" href="{!! url('competency/edit') !!}">--}}
+		{{--Een competentie wijzigen--}}
+	{{--</a>--}}
+{{--</div>--}}
+
+{{--<div style="float:left">--}}
+	{{--<a class="btn btn-primary" href="{!! url('competency/show') !!}">--}}
+		{{--Alle competenties weergeven--}}
+	{{--</a>--}}
+{{--</div>--}}
 
 	@if (count($competenties) > 0)
 	<!-- Shows ID of item in database and name-->

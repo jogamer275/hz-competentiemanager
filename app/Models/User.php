@@ -54,6 +54,18 @@ class User extends Authenticatable
 
 //end contactOfProject()
 
+/**
+ * Will some day return which students have chosen which competency
+ * @return Eloquent Relation
+ */
+
+public function competencyOfUser()
+    {
+        return $this->belongsToMany('App\Models\User', 'user_competencies', 'user_id', 'competency_id');
+    }
+
+//end competencyOfUser()
+
     /**
      * Optional link between a User and a Student.
      *

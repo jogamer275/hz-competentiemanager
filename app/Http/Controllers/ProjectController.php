@@ -58,6 +58,7 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
         $validator = $this->validator($request->all());
@@ -70,7 +71,6 @@ class ProjectController extends Controller
 
         return redirect('/project/')->with(['status' => 'Project Aangemaakt']);
     }
-
 //end store()
 
     /**

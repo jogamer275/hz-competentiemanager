@@ -23,6 +23,9 @@ Route::get('/project', function () {
     return view('project');
 });
 
+Route::get('/userCompetencies', 'UserCompetenciesController@index');
+Route::post('/userCompetencies/store', 'UserCompetenciesController@store')->name('usercomp.store');
+
 Route::auth();
 
 Route::get('/dashboard', 'HomeController@index');
