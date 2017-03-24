@@ -14,10 +14,10 @@ class CreateUserCompetenciesTable extends Migration
     public function up()
     {
         Schema::create('user_competencies', function (Blueprint $table) {
-         $table->integer ('user_id')->unsigned();
-         $table->foreign ('user_id')->references('id')->on('users');
-         $table->integer ('competency_id')->unsigned();
-         $table->foreign ('competency_id')->references('id')->on('competency');
+         $table->Integer ('user_id')->unsigned();
+         $table->foreign('user_id')->references('id')->on('users');
+         $table->Integer ('competency_id')->unsigned();
+         $table->foreign ('competency_id')->references('id')->on('competencies');
      });
     }
 

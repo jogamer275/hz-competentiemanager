@@ -18,6 +18,7 @@
             <tr>
                 <td>
                     <input type="hidden" name="Language" value= <?= $userComps = DB::table('user_competencies')->pluck('competency_id');?>>
+
                 </td>
             </tr>
 
