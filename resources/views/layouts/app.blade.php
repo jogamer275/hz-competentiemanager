@@ -95,6 +95,7 @@
                         <li><a href="{{ url('/competency') }}">Competenties</a></li>
                         <li><a href="{{ url('/project') }}">Projecten</a></li>
                         <li><a href="{{ url('userCompetencies') }}">Competentie Kiezen</a></li>
+                        <li><a href="{{ url('userCompetencies/show') }}">Mijn Competenties</a></li>
                     </ul>
 				</div>
             </div>
