@@ -21,7 +21,6 @@
 
                 </td>
             </tr>
-
             @foreach ($userComps as $userComp)
                 <tr>
                     <td>
@@ -29,6 +28,19 @@
                     </td>
                 </tr>
             @endforeach
+
+        <!--This if-statement gives the user some information about the number of competencies-->
+        <h4 style="color: Red">
+            @if(count($userComps)== 0)
+                Je hebt geen competenties
+            @elseif(count($userComps)== 1)
+                Je hebt 1 competentie. Ga zo door!
+            @elseif(count($userComps)== 2 or (count($userComps) == 3))
+                Je hebt een goed aantal competenties. Goed gedaan!
+            @else
+                Je hebt een heleboel competenties. Pas op dat je er niet teveel doet!
+            @endif
+        </h4>
 
         </table>
     </h2>
