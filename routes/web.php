@@ -23,11 +23,11 @@ Route::get('/project', function () {
     return view('project');
 });
 
-
+/*
 Route::get('/userCompetencies/show', 'UserCompetenciesController@show');
 Route::get('/userCompetencies', 'UserCompetenciesController@index');
 Route::post('/userCompetencies/store', 'UserCompetenciesController@store')->name('usercomp.store');
-
+*/
 Route::auth();
 
 Route::get('/dashboard', 'HomeController@index');
@@ -36,3 +36,4 @@ Route::get('/demand', 'DemandController@index');
 Route::resource('competency', 'CompetencyController');
 Route::resource('project', 'ProjectController');
 Route::resource('user', 'UserController');
+Route::resource('userCompetencies', 'UserCompetenciesController');

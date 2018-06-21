@@ -10,12 +10,12 @@ class Competency extends Model
      * Mass fillable fields.
      */
     protected $fillable = [
-                           'name',
-                           'abbreviation',
-                           'description',
-                           'ec_value',
-                           'cu_code',
-                          ];
+        'name',
+        'abbreviation',
+        'description',
+        'ec_value',
+        'cu_code',
+    ];
 
     /**
      * Many to many elequent relation with students. (or collection if called without parentheces).
@@ -66,6 +66,11 @@ class Competency extends Model
     public function slots()
     {
         $this->belongsToMany('App\Models\Slot', 'slots_competencies', 'competency_id', 'slot_id');
+    }
+
+    public function users()
+    {
+        $this->belongsToMany('App\Models\User', 'user_competencies');
     }
 
 //end slots()

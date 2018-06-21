@@ -15,10 +15,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-                           'name',
-                           'email',
-                           'password',
-                          ];
+        'name',
+        'email',
+        'password',
+    ];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -26,9 +26,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-                         'password',
-                         'remember_token',
-                        ];
+        'password',
+        'remember_token',
+    ];
 
     /**
      * Many to many elequent relation with competencies. (or collection if called without parentheces).
@@ -37,7 +37,7 @@ class User extends Authenticatable
      */
     public function competencies()
     {
-        return $this->hasMany('App\Competency');
+        return $this->belongsToMany('App\Models\Competency', 'user_competencies');
     }
 
 //end competencies()
@@ -54,12 +54,12 @@ class User extends Authenticatable
 
 //end contactOfProject()
 
-/**
- * Returns which students have chosen which competency
- * @return Eloquent Relation
- */
+    /**
+     * Returns which students have chosen which competency
+     * @return Eloquent Relation
+     */
 
-public function competencyOfUser()
+    public function competencyOfUser()
     {
         return $this->belongsToMany('App\Models\User', 'user_competencies', 'user_id', 'competency_id');
     }
