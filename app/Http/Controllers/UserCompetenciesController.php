@@ -40,7 +40,7 @@ class UserCompetenciesController extends Controller
 
     public function destroy($id)
     {
-        // Find the competency object in the databas
+        // Find the competency object in the database
         $user = User::find(Auth::id());
         $user->competencies()->detach($id);
 
